@@ -1,0 +1,30 @@
+@import "variables";
+
+.wrapper {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.gameWrapper {
+  background-color: var(--bs-body-bg);
+  border-radius: 1rem;
+  overflow: hidden;
+
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+
+  @include media-breakpoint-down(sm) {
+    margin-left: -$grid-gutter-width * 0.25;
+    margin-right: -$grid-gutter-width * 0.25;
+  }
+}
+
+.loader-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.834)
+      url("https://media.giphy.com/media/8agqybiK5LW8qrG3vJ/giphy.gif") center
+      no-repeat;
+  z-index: 1;
+}
+

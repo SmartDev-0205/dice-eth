@@ -1,0 +1,14 @@
+{
+  "presets": [
+        ["@babel/preset-env", {
+            "useBuiltIns": "entry",
+            "corejs": 3,
+            "targets": {
+                "browsers": [">0.1%"]
+            },
+            "debug": false
+        }],
+        "@babel/preset-react"
+  ],
+  "plugins": ["@babel/plugin-proposal-object-rest-spread", "@babel/plugin-proposal-class-properties"]
+}
