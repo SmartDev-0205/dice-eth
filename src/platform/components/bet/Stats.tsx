@@ -73,6 +73,8 @@ class Stats extends React.Component<Props, CompState> {
 
     render() {
         const {allBets, myBets, showMyBets, showBetModal, showUserModal} = this.props;
+
+        console.log("-----------------------",allBets);
         const {activeTab} = this.state;
         const curActiveTab = showMyBets ? activeTab : "allBets";
 
@@ -103,7 +105,7 @@ class Stats extends React.Component<Props, CompState> {
                 <TabContent activeTab={curActiveTab}>
                     <TabPane tabId="allBets">
                         <BetsList
-                            bets={allBets}
+                            bets={allBets.filter((item)=>{return item.gameType==1})}
                             showBetModal={(bet) => showBetModal({bet})}
                             showUserModal={(user) => showUserModal({user})}
                         />
